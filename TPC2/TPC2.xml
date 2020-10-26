@@ -6,7 +6,7 @@
     <subtitle>Segundo trabalho de Processamento e Reconhecimento de Informação</subtitle>
     <begindate>string</begindate>
     <enddate>string</enddate>
-    <supervisor href="anySimpleType">e gero</supervisor>
+    <supervisor href="mailto:jcr@di.uminho.pt">José </supervisor>
   </metadados>
   <workteam>
     <!--1 or more repetitions:-->
