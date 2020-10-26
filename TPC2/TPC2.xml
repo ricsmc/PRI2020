@@ -1,0 +1,33 @@
+<projectrecord>
+  <metadados>
+    <keyname>PRI2020_TPCS</keyname>
+    <title>TPC2</title>
+    <!--Optional:-->
+    <subtitle>Segundo trabalho de Processamento e Reconhecimento de Informação</subtitle>
+    <begindate>string</begindate>
+    <enddate>string</enddate>
+    <supervisor href="anySimpleType">e gero</supervisor>
+  </metadados>
+  <workteam>
+    <!--1 or more repetitions:-->
+    <elemento href="anySimpleType">
+      <nome>José Ricardo Cunha</nome>
+      <numero>A84302</numero>
+      <email href="mailto:a84302@alunos.uminho.pt">a84302@alunos.uminho.pt</email>
+    </elemento>
+  </workteam>
+  <abstract>
+    <!--1 or more repetitions:-->
+    <paragrafo>
+      <!--You have a CHOICE of the next 5 items at this level-->
+      <texto>Neste projecto pretende-se que o aluno crie um project record em formato .dtd para uso futuro.</texto>
+    </paragrafo>
+  </abstract>
+  <deliverables>
+    <!--1 or more repetitions:-->
+    <deliverable>
+      <!--You have a CHOICE of the next 2 items at this level-->
+      <link href="PR.dtd">Project Record</link>
+    </deliverable>
+  </deliverables>
+</projectrecord>
