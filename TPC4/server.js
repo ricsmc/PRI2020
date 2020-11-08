@@ -5,8 +5,7 @@ var servidor = http.createServer(function(req,res){
     if(req.url.match(/\/arqs\/([1-9]|[1-9][0-9]|[1-9][0-2][0-9]|\*)$/)){
         var arqs = req.url.split("/")[1]
         var num = req.url.split("/")[2]
-        console.log(num);
-        if(arqs==='arqs' && num){
+        if(arqs==='arqs'){
             if (num==='*'){
                 fs.readFile('arqweb/index.html', function(err, data){
                     if(err){
@@ -43,7 +42,7 @@ var servidor = http.createServer(function(req,res){
         }
         
     }
-    else if(req.url.match(/$/) | req.url.match(/arqs$/)){
+    else if(req.url.match(/$/)){
         res.writeHead(200, {location: 'http://localhost:7777/arqs/*'});
         res.end();
     }
