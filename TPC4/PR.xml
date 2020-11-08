@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "../../PR.dtd">
+<pr>
+    <meta>
+        <key>PRI2020_TPCS</key>
+        <title>TPC4</title>
+        <bdate>2-11-2020</bdate>
+        <edate>9-11-2020</edate>
+        <supervisor url="mailto:jcr@di.uminho.pt">José Carlos Ramalho</supervisor>
+    </meta>
+    <workteam>
+        <worker num="A84302">
+            <name>José Ricardo Cunha</name>
+            <email>a84302@alunos.uminho.pt</email>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>Neste projecto pretende-se que o aluno crie um website usando o dataset <link url="http://www4.di.uminho.pt/~jcr/XML/didac/xmldocs/arq.xml">Arqueossítios</link> de maneira a fazer pedidios localhost e o respetivo servidor em <b>NodeJS</b>.</p>
+    </abstract>
+    <deliverables>
+        <link url="https://github.com/ricsmc/PRI2020/blob/master/TPC4/arqueossitio-site.xsl">XSLT</link>
+        <link url="https://github.com/ricsmc/PRI2020/blob/master/TPC4/server.js">Servidor</link>
+    </deliverables>
+</pr>
