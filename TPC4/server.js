@@ -41,12 +41,6 @@ var servidor = http.createServer(function(req,res){
                 
             }
         }
-        else if(arqs==='arqs'){
-            res.writeHead(200, {location: 'http://localhost:7777/arqs/*'});
-            res.end();
-        }
-
-        
         
     }
     else if(req.url.match(/$/) | req.url.match(/arqs$/)){
