@@ -13,14 +13,14 @@
         <h3>Arqueossítios</h3>
               <ul>
                 <xsl:apply-templates mode="indice" select="//ARQELEM">
-                  <xsl:sort select="IDENTI" lang="PT"/>
+                  <xsl:sort select="IDENTI"/>
                 </xsl:apply-templates>
               </ul>
       </body>
     </html>
     </xsl:result-document>
-    <xsl:apply-templates select="//ARQELEM" mode="paginas"> <!-- Travessia para gerar as páginas dos registos -->
-      <xsl:sort select="IDENTI" lang="PT">
+    <xsl:apply-templates select="//ARQELEM" mode="pag">
+      <xsl:sort select="IDENTI">
         
       </xsl:sort>
     </xsl:apply-templates> 
@@ -37,7 +37,7 @@
   </xsl:template>
   
   <!-- TEMPLATE PARA CONTEUDO ....................................................-->
-  <xsl:template match="ARQELEM" mode="paginas">
+  <xsl:template match="ARQELEM" mode="pag">
     <xsl:result-document href="arqweb/arq{position()}.html">
       <html>
         <head>
