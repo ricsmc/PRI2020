@@ -34,13 +34,12 @@ var servidor = http.createServer(function(req,res){
                 });
             }
             res.write("</ul>")
-            var rel = resp.headers.link.split(";")[1].split("=")[1].split(",")[0]
-            console.log(rel)
-            
+            var last = resp.headers.link.split(",")[2].split(";")[0].split('?')[1].split('=')[1].split('>')[0]
+            var first = resp.headers.link.split(",")[0].split(";")[0].split('?')[1].split('=')[1].split('>')[0]
             nx = parseInt(pag)+1
             px = parseInt(pag) -1
-            if(rel !=  '"last"') res.write('<p><a href="http://localhost:3001/' + tipo + '/' + nx + '">Next Page</a></p>')
-            if(rel != '"first"') res.write('<p><a href="http://localhost:3001/' + tipo + '/' + px + '">Previous Page</a></p>')
+            if(pag != last) res.write('<p><a href="http://localhost:3001/' + tipo + '/' + nx + '">Next Page</a></p>')
+            if(pag != first) res.write('<p><a href="http://localhost:3001/' + tipo + '/' + px + '">Previous Page</a></p>')
             
             res.end()
         })
