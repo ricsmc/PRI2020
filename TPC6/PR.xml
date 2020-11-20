@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "../../PR.dtd">
+<pr>
+    <meta>
+        <key>PRI2020_TPCS</key>
+        <title>TPC5</title>
+        <bdate>9-11-2020</bdate>
+        <edate>16-11-2020</edate>
+        <supervisor url="mailto:jcr@di.uminho.pt">José Carlos Ramalho</supervisor>
+    </meta>
+    <workteam>
+        <worker num="A84302">
+            <name>José Ricardo Cunha</name>
+            <email>a84302@alunos.uminho.pt</email>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>Neste projecto pretende-se que o aluno crie um servidor em JS que aceda a um servidor JSON-server para obter a informação</p>
+    </abstract>
+    <deliverables>
+        <link url="https://github.com/ricsmc/PRI2020/blob/master/TPC5/server.js">Servidor</link>
+        <link url="https://github.com/ricsmc/PRI2020/blob/master/TPC5/index.htmls">Índice</link>
+    </deliverables>
+</pr>
