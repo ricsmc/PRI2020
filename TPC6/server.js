@@ -93,6 +93,12 @@ function geraPagAlunos( lista, d){
         <td><a href="/tarefas/${a.id}">${a.descricao}</a></td>
         <td>${a.responsavel}</td>
         <td>${a.data}</td>
+        <td>
+            <form class="w3-container" action="/tarefas/${a.id}" method="PATCH">
+                <input class="w3-input w3-border w3-light-grey" type="text" name="tipo">
+                <input class="w3-btn w3-blue-grey" type="submit" value="Registar"/>
+            </form>
+        </td>
       </tr>
       `
   });
@@ -215,6 +221,30 @@ var galunoServer = http.createServer(function (req, res) {
                             res.write('<p><a href="/">Voltar</a></p>')
                             res.end()
                         })
+                })
+            }
+            else{
+                res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
+                res.write('<p>Recebi um POST não suportado.</p>')
+                res.write('<p><a href="/">Voltar</a></p>')
+                res.end()
+            }
+            break
+        case 'PATCH':
+            if(/\/tarefas\/[a-zA-Z0-9]+$/.test(req.url)){
+                var idTarefa = req.url.split("/")[2]
+                recuperaInfo(req,resultado => {
+                    axios.patch('http://localhost:3017/tarefas/' + idTarefa, resultado)
+                    .then(a => {
+                        a.writeHead(200, {location: 'http://localhost:7777'})
+                        a.end()
+                    })
+                    .catch(erro => {
+                        res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
+                        res.write('<p>Erro no PATCH: ' + erro + '</p>')
+                        res.write('<p><a href="/">Voltar</a></p>')
+                        res.end()
+                    })
                 })
             }
             else{
