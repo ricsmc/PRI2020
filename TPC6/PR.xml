@@ -15,10 +15,10 @@
         </worker>
     </workteam>
     <abstract>
-        <p>Neste projecto pretende-se que o aluno crie um servidor em JS que aceda a um servidor JSON-server para obter a informação</p>
+        <p>Neste projecto pretende-se que o aluno crie um SPA para uma lista de tarefas</p>
     </abstract>
     <deliverables>
-        <link url="https://github.com/ricsmc/PRI2020/blob/master/TPC5/server.js">Servidor</link>
-        <link url="https://github.com/ricsmc/PRI2020/blob/master/TPC5/index.htmls">Índice</link>
+        <link url="https://github.com/ricsmc/PRI2020/blob/master/TPC6/server.js">Servidor</link>
+        <link url="https://github.com/ricsmc/PRI2020/blob/master/TPC6/db.json">Base de dados</link>
     </deliverables>
 </pr>
