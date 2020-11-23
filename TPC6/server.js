@@ -90,15 +90,15 @@ function geraPagAlunos( lista, d){
   lista.forEach(a => {
       pagHTML += `
       <tr>
-        <td><a href="/tarefas/${a.id}">${a.descricao}</a></td>
-        <td>${a.responsavel}</td>
-        <td>${a.data}</td>
+      <form class="w3-container" action="/tarefas/${a.id}" method="POST">
+        <input type="hidden" name="_method" value="put" />
+        <td type="text" name="descricao"><a href="/tarefas/${a.id}">${a.descricao}</a></td>
+        <td type="text" name="responsavel">${a.responsavel}</td>
+        <td type="text" name="data">${a.data}</td>
         <td>
-            <form class="w3-container" action="/tarefas/${a.id}" method="PATCH">
-                <input class="w3-input w3-border w3-light-grey" type="text" name="tipo">
-                <input class="w3-btn w3-blue-grey" type="submit" value="Registar"/>
-            </form>
+            <button class="w3-btn w3-blue-grey" type="submit" value="1" name="tipo">Finalizar</button>
         </td>
+        </form>
       </tr>
       `
   });
@@ -230,7 +230,8 @@ var galunoServer = http.createServer(function (req, res) {
                 res.end()
             }
             break
-        case 'PATCH':
+        case 'PUT':
+            console.log("oi")
             if(/\/tarefas\/[a-zA-Z0-9]+$/.test(req.url)){
                 var idTarefa = req.url.split("/")[2]
                 recuperaInfo(req,resultado => {
